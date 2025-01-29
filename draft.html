@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Draft - Blogging Website</title>
+    <style>
+        /* Basic CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling - Black Background, White Text */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Black Background */
+            color: #fff; /* White Text */
+            line-height: 1.6;
+            background-image: url('draft image');
+        }
+
+        /* Container for the Draft Page */
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #222; /* Dark grey background for container */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #444; /* Dark grey header */
+            color: white;
+            border-radius: 8px;
+        }
+
+        /* Form Styling */
+        form {
+            margin-top: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #333; /* Dark background for input fields */
+            color: white; /* White text inside input fields */
+        }
+
+        textarea {
+            height: 300px;
+            resize: vertical;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #444; /* Dark grey button */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #555; /* Lighter grey on hover */
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Save Your Blog Draft</h1>
+    </header>
+
+    <form action="/save-draft" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" placeholder="Enter the title of your draft" required>
+
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" placeholder="Write your draft here..." required></textarea>
+
+        <button type="submit">Save Draft</button>
+    </form>
+</div>
+
+</body>
+</html>
